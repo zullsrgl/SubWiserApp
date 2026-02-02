@@ -1,0 +1,690 @@
+[
+    { "id": "1",
+        "name": "Netflix",
+        "category": "Stream",
+        "domain": "netflix.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=netflix.com",
+        "color": "#E50914"
+    },
+    { "id": "2",
+        "name": "Spotify",
+        "category": "Music",
+        "domain": "spotify.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=spotify.com",
+        "color": "#1DB954"
+    },
+    { "id": "3",
+        "name": "YouTube Premium",
+        "category": "Stream", "domain": "youtube.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=youtube.com",
+        "color": "#FF0000"
+    },
+    { "id": "4",
+        "name": "Amazon Prime",
+        "category": "Shopping",
+        "domain": "amazon.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=amazon.com",
+        "color": "#00A8E1"
+    },
+    { "id": "5",
+        "name": "Disney+",
+        "category": "Stream",
+        "domain": "disneyplus.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=disneyplus.com",
+        "color": "#113CCF"
+    },
+    { "id": "9",
+        "name": "BluTV",
+        "category": "Stream",
+        "domain": "blutv.com.tr",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=blutv.com.tr",
+        "color": "#00CCFF"
+    },
+    { "id": "10",
+        "name": "Exxen",
+        "category": "Stream",
+        "domain": "exxen.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=exxen.com",
+        "color": "#FDE047"
+    },
+    { "id": "12",
+        "name": "Tod TV",
+        "category": "Stream",
+        "domain": "todtv.com.tr",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=todtv.com.tr",
+        "color": "#6A2BC3"
+    },
+    {
+        "id": "13",
+        "name": "MUBI",
+        "category": "Stream",
+        "domain": "mubi.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=mubi.com",
+        "color": "#0000D5"
+    },
+    {
+        "id": "14",
+        "name": "Canva",
+        "category": "Design",
+        "domain": "canva.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=canva.com",
+        "color": "#00C4CC"
+    },
+    {
+        "id": "15",
+        "name": "Adobe Creative Cloud",
+        "category": "Design",
+        "domain": "adobe.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=adobe.com",
+        "color": "#FF0000"
+    },
+    {
+        "id": "16",
+        "name": "Midjourney",
+        "category": "AI",
+        "domain": "midjourney.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=midjourney.com",
+        "color": "#FFFFFF"
+    },
+    {
+        "id": "17",
+        "name": "Duolingo Plus",
+        "category": "Education",
+        "domain": "duolingo.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=duolingo.com",
+        "color": "#58CC02"
+    },
+    {
+        "id": "18",
+        "name": "Xbox Game Pass",
+        "category": "Gaming",
+        "domain": "xbox.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=xbox.com",
+        "color": "#107C10"
+    },
+    {
+        "id": "19",
+        "name": "PlayStation Plus",
+        "category": "Gaming",
+        "domain": "playstation.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=playstation.com",
+        "color": "#003791"
+    },
+    {
+        "id": "20",
+        "name": "Steam",
+        "category": "Gaming",
+        "domain": "steampowered.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=steampowered.com",
+        "color": "#000000"
+    },
+    {
+        "id": "21",
+        "name": "Discord Nitro",
+        "category": "Social",
+        "domain": "discord.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=discord.com",
+        "color": "#5865F2"
+    },
+    {
+        "id": "22",
+        "name": "Telegram Premium",
+        "category": "Social",
+        "domain": "telegram.org",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=telegram.org",
+        "color": "#24A1DE"
+    },
+    {
+        "id": "23",
+        "name": "X Premium",
+        "category": "Social",
+        "domain": "x.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=x.com",
+        "color": "#000000"
+    },
+    {
+        "id": "24",
+        "name": "LinkedIn Premium",
+        "category": "Business",
+        "domain": "linkedin.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=linkedin.com",
+        "color": "#0A66C2"
+    },
+    {
+        "id": "25",
+        "name": "Storytel",
+        "category": "Books",
+        "domain": "storytel.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=storytel.com",
+        "color": "#FF6341"
+    },
+    {
+        "id": "26",
+        "name": "Audible",
+        "category": "Books",
+        "domain": "audible.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=audible.com",
+        "color": "#F1C40F"
+    },
+    {
+        "id": "27",
+        "name": "Medium",
+        "category": "Reading",
+        "domain": "medium.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=medium.com",
+        "color": "#000000"
+    },
+    {
+        "id": "28",
+        "name": "New York Times",
+        "category": "News",
+        "domain": "nytimes.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=nytimes.com",
+        "color": "#000000"
+    },
+    {
+        "id": "29",
+        "name": "Evernote",
+        "category": "Productivity",
+        "domain": "evernote.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=evernote.com",
+        "color": "#00A82D"
+    },
+    {
+        "id": "30",
+        "name": "Notion",
+        "category": "Productivity",
+        "domain": "notion.so",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=notion.so",
+        "color": "#000000"
+    },
+    {
+        "id": "31",
+        "name": "Trello",
+        "category": "Productivity",
+        "domain": "trello.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=trello.com",
+        "color": "#0079BF"
+    },
+    {
+        "id": "32",
+        "name": "Slack",
+        "category": "Business",
+        "domain": "slack.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=slack.com",
+        "color": "#4A154B"
+    },
+    {
+        "id": "33",
+        "name": "Zoom",
+        "category": "Business",
+        "domain": "zoom.us",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=zoom.us",
+        "color": "#2D8CFF"
+    },
+    {
+        "id": "34",
+        "name": "Dropbox",
+        "category": "Storage",
+        "domain": "dropbox.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=dropbox.com",
+        "color": "#0061FF"
+    },
+    {
+        "id": "35",
+        "name": "Google One",
+        "category": "Storage",
+        "domain": "google.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=google.com",
+        "color": "#4285F4"
+    },
+    {
+        "id": "36",
+        "name": "Microsoft 365",
+        "category": "Productivity",
+        "domain": "microsoft.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=microsoft.com",
+        "color": "#D83B01"
+    },
+    {
+        "id": "37",
+        "name": "GitHub Copilot",
+        "category": "Development",
+        "domain": "github.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=github.com",
+        "color": "#181717"
+    },
+    {
+        "id": "38",
+        "name": "Figma",
+        "category": "Design",
+        "domain": "figma.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=figma.com",
+        "color": "#F24E1E"
+    },
+    {
+        "id": "39",
+        "name": "Sketch",
+        "category": "Design",
+        "domain": "sketch.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=sketch.com",
+        "color": "#FDB300"
+    },
+    {
+        "id": "40",
+        "name": "Framers",
+        "category": "Design",
+        "domain": "framer.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=framer.com",
+        "color": "#0055FF"
+    },
+    {
+        "id": "41",
+        "name": "Twitch Prime",
+        "category": "Stream",
+        "domain": "twitch.tv",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=twitch.tv",
+        "color": "#9146FF"
+    },
+    {
+        "id": "42",
+        "name": "Crunchyroll",
+        "category": "Anime",
+        "domain": "crunchyroll.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=crunchyroll.com",
+        "color": "#F47521"
+    },
+    {
+        "id": "43",
+        "name": "Deezer",
+        "category": "Music",
+        "domain": "deezer.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=deezer.com",
+        "color": "#00C7FF"
+    },
+    {
+        "id": "44",
+        "name": "Tidal",
+        "category": "Music",
+        "domain": "tidal.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=tidal.com",
+        "color": "#000000"
+    },
+    {
+        "id": "45",
+        "name": "SoundCloud Go",
+        "category": "Music",
+        "domain": "soundcloud.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=soundcloud.com",
+        "color": "#FF3300"
+    },
+    {
+        "id": "46",
+        "name": "Paramount+",
+        "category": "Stream",
+        "domain": "paramountplus.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=paramountplus.com",
+        "color": "#0064FF"
+    },
+    {
+        "id": "47",
+        "name": "Hulu",
+        "category": "Stream",
+        "domain": "hulu.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=hulu.com",
+        "color": "#1CE783"
+    },
+    {
+        "id": "48",
+        "name": "HBO Max",
+        "category": "Stream",
+        "domain": "hbomax.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=hbomax.com",
+        "color": "#5822B4"
+    },
+    {
+        "id": "49",
+        "name": "Skillshare",
+        "category": "Education",
+        "domain": "skillshare.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=skillshare.com",
+        "color": "#002333"
+    },
+    {
+        "id": "50",
+        "name": "Udemy",
+        "category": "Education",
+        "domain": "udemy.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=udemy.com",
+        "color": "#A435F0"
+    },
+    {
+        "id": "51",
+        "name": "Coursera Plus",
+        "category": "Education",
+        "domain": "coursera.org",
+        "image_url": "https",
+        "color": "#4086FF"
+        
+    },
+    {
+        "id": "61",
+        "name": "Surfshark VPN",
+        "category": "Privacy",
+        "domain": "surfshark.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=surfshark.com",
+        "color": "#00D18A"
+    },
+    {
+        "id": "62",
+        "name": "NordVPN",
+        "category": "Privacy",
+        "domain": "nordvpn.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=nordvpn.com",
+        "color": "#4687FF"
+    },
+    {
+        "id": "63",
+        "name": "ExpressVPN",
+        "category": "Privacy",
+        "domain": "expressvpn.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=expressvpn.com",
+        "color": "#E11D2B"
+    },
+    {
+        "id": "64",
+        "name": "1Password",
+        "category": "Security",
+        "domain": "1password.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=1password.com",
+        "color": "#0094F5"
+    },
+    {
+        "id": "65",
+        "name": "LastPass",
+        "category": "Security",
+        "domain": "lastpass.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=lastpass.com",
+        "color": "#D32D27"
+    },
+    {
+        "id": "66",
+        "name": "Grammarly Premium",
+        "category": "Productivity",
+        "domain": "grammarly.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=grammarly.com",
+        "color": "#15C39A"
+    },
+    {
+        "id": "67",
+        "name": "Quizlet Plus",
+        "category": "Education",
+        "domain": "quizlet.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=quizlet.com",
+        "color": "#4255FF"
+    },
+    {
+        "id": "68",
+        "name": "Codecademy Pro",
+        "category": "Education",
+        "domain": "codecademy.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=codecademy.com",
+        "color": "#1F4056"
+    },
+    {
+        "id": "69",
+        "name": "Pluralsight",
+        "category": "Education",
+        "domain": "pluralsight.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=pluralsight.com",
+        "color": "#F05A28"
+    },
+    {
+        "id": "70",
+        "name": "Brilliant.org",
+        "category": "Education",
+        "domain": "brilliant.org",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=brilliant.org",
+        "color": "#000000"
+    },
+    {
+        "id": "71",
+        "name": "Shopify",
+        "category": "Business",
+        "domain": "shopify.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=shopify.com",
+        "color": "#96BF48"
+    },
+    {
+        "id": "72",
+        "name": "Squarespace",
+        "category": "Business",
+        "domain": "squarespace.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=squarespace.com",
+        "color": "#000000"
+    },
+    {
+        "id": "73",
+        "name": "Wix",
+        "category": "Business",
+        "domain": "wix.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=wix.com",
+        "color": "#000000"
+    },
+    {
+        "id": "74",
+        "name": "Webflow",
+        "category": "Business",
+        "domain": "webflow.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=webflow.com",
+        "color": "#4353FF"
+    },
+    {
+        "id": "75",
+        "name": "Mailchimp",
+        "category": "Business",
+        "domain": "mailchimp.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=mailchimp.com",
+        "color": "#FFE01B"
+    },
+    {
+        "id": "76",
+        "name": "Zapier",
+        "category": "Productivity",
+        "domain": "zapier.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=zapier.com",
+        "color": "#FF4A00"
+    },
+    {
+        "id": "77",
+        "name": "Airtable",
+        "category": "Productivity",
+        "domain": "airtable.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=airtable.com",
+        "color": "#18BFFF"
+    },
+    {
+        "id": "78",
+        "name": "Typeform",
+        "category": "Business",
+        "domain": "typeform.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=typeform.com",
+        "color": "#000000"
+    },
+    {
+        "id": "79",
+        "name": "Shutterstock",
+        "category": "Design",
+        "domain": "shutterstock.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=shutterstock.com",
+        "color": "#EE2B24"
+    },
+    {
+        "id": "80",
+        "name": "Envato Elements",
+        "category": "Design",
+        "domain": "envato.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=envato.com",
+        "color": "#81B441"
+    },
+    {
+        "id": "81",
+        "name": "Pocket",
+        "category": "Reading",
+        "domain": "getpocket.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=getpocket.com",
+        "color": "#EF4056"
+    },
+    {
+        "id": "82",
+        "name": "Instapaper",
+        "category": "Reading",
+        "domain": "instapaper.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=instapaper.com",
+        "color": "#000000"
+    },
+    {
+        "id": "83",
+        "name": "WolframAlpha Pro",
+        "category": "Education",
+        "domain": "wolframalpha.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=wolframalpha.com",
+        "color": "#FF7E00"
+    },
+    {
+        "id": "84",
+        "name": "Fitbit Premium",
+        "category": "Fitness",
+        "domain": "fitbit.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=fitbit.com",
+        "color": "#00B0B9"
+    },
+    {
+        "id": "85",
+        "name": "Flo Premium",
+        "category": "Health",
+        "domain": "flo.health",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=flo.health",
+        "color": "#FF8B8B"
+    },
+    {
+        "id": "86",
+        "name": "Bumble Premium",
+        "category": "Social",
+        "domain": "bumble.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=bumble.com",
+        "color": "#FFC629"
+    },
+    {
+        "id": "87",
+        "name": "Tinder Gold",
+        "category": "Social",
+        "domain": "tinder.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=tinder.com",
+        "color": "#FF4458"
+    },
+    {
+        "id": "88",
+        "name": "Busuu Premium",
+        "category": "Education",
+        "domain": "busuu.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=busuu.com",
+        "color": "#29A9E1"
+    },
+    {
+        "id": "89",
+        "name": "Babbel",
+        "category": "Education",
+        "domain": "babbel.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=babbel.com",
+        "color": "#FF6D00"
+    },
+    {
+        "id": "90",
+        "name": "Lingvist",
+        "category": "Education",
+        "domain": "lingvist.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=lingvist.com",
+        "color": "#1F4056"
+    },
+    {
+        "id": "91",
+        "name": "Skillshare",
+        "category": "Education",
+        "domain": "skillshare.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=skillshare.com",
+        "color": "#002333"
+    },
+    {
+        "id": "92",
+        "name": "Wall Street Journal",
+        "category": "News",
+        "domain": "wsj.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=wsj.com",
+        "color": "#000000"
+    },
+    {
+        "id": "93",
+        "name": "The Economist",
+        "category": "News",
+        "domain": "economist.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=economist.com",
+        "color": "#E3120B"
+    },
+    {
+        "id": "94",
+        "name": "Bloomberg",
+        "category": "News",
+        "domain": "bloomberg.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=bloomberg.com",
+        "color": "#2800D7"
+    },
+    {
+        "id": "95",
+        "name": "Scribd",
+        "category": "Books",
+        "domain": "scribd.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=scribd.com",
+        "color": "#1E3354"
+    },
+    {
+        "id": "96",
+        "name": "Nextory",
+        "category": "Books",
+        "domain": "nextory.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=nextory.com",
+        "color": "#FF0072"
+    },
+    {
+        "id": "97",
+        "name": "BookBeat",
+        "category": "Books",
+        "domain": "bookbeat.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=bookbeat.com",
+        "color": "#000000"
+    },
+    {
+        "id": "98",
+        "name": "HelloFresh",
+        "category": "Food",
+        "domain": "hellofresh.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=hellofresh.com",
+        "color": "#4D841D"
+    },
+    {
+        "id": "99",
+        "name": "Blue Apron",
+        "category": "Food",
+        "domain": "blueapron.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=blueapron.com",
+        "color": "#002646"
+    },
+    {
+        "id": "100",
+        "name": "Uber One",
+        "category": "Transport",
+        "domain": "uber.com",
+        "image_url": "https://www.google.com/s2/favicons?sz=128&domain=uber.com",
+        "color": "#000000"
+    }
+]

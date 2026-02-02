@@ -8,23 +8,26 @@
 import SwiftUI
 
 struct AddSubscriptionView: View {
-    
-    @State private var searchText = ""
+    @StateObject private var viewModel = AddSubsViewModel()
     
     var body: some View {
         ScrollView {
-            ZStack(alignment: .top){
-                LazyVStack {
-                    ForEach(0..<20){index in
-                        SubListCardView()
-                    }
+            LazyVStack(spacing: 24) {
+                ForEach(viewModel.filteredServices) { service in
+                    SubListCardView(appIconUrl: service.image_url,
+                                    appName: service.name,
+                                    appCategory: service.category)
+                    
                 }
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("background"))
         .navigationTitle("New Subscription")
-        .searchable(text: $searchText, prompt: "Search subscriptions")
+        .searchable(text: $viewModel.searchText, prompt: "Search subscriptions")
+        .onAppear {
+            viewModel.loadServices()
+        }
     }
 }
 

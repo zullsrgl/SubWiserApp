@@ -9,21 +9,44 @@ import SwiftUI
 
 
 struct SubListCardView: View {
+    var appIconUrl: String
+    var appName: String
+    var appCategory: String
+    
     var body: some View {
-        HStack {
-            Image(systemName: "heart")
-                .resizable()
-                .frame(width: 60, height: 60)
+        HStack{
+            AsyncImage(url: URL(string: appIconUrl)) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+                        .frame(width: 40, height: 40)
+                        
+                case .success(let image):
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 40, height: 40)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        
+                case .failure:
+                    Image(systemName: "questionmark.app.dashed")
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                        .foregroundColor(.gray)
+                        
+                @unknown default:
+                    EmptyView()
+                }
+            }
             
-            
-            VStack {
-                Text("Getir")
+            VStack(alignment: .leading){
+                Text(appName)
                     .foregroundStyle(Color("white"))
                     .font(.headline)
                     .multilineTextAlignment(.leading)
                     .fontWeight(.semibold)
                 
-                Text("Food")
+                Text(appCategory)
                     .foregroundStyle(Color("gray"))
                     .font(.headline)
                     .multilineTextAlignment(.leading)
@@ -34,7 +57,8 @@ struct SubListCardView: View {
             
             Image(systemName: "chevron.right")
                 .resizable()
-                .frame(width: 20, height: 30)
+                .foregroundStyle(Color("white"))
+                .frame(width: 10, height: 20)
         }
         .padding(.horizontal, 16)
     }
@@ -42,5 +66,5 @@ struct SubListCardView: View {
 
 
 #Preview {
-    SubListCardView()
+    SubListCardView(appIconUrl: "", appName: "", appCategory: "")
 }
