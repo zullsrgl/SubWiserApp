@@ -2,7 +2,7 @@
 //  SubWiserApp.swift
 //  SubWiser
 //
-//  Created by Enes Arabacı on 1.02.2026.
+//  Created by Zülal Sarıoğlu on 1.02.2026.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct SubWiserApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
