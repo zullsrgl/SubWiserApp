@@ -9,7 +9,7 @@ import SwiftUI
 
 enum Root: Hashable {
     case home
-    case detail
+    case detail(ServiceItem)
     case addSubscription
 }
 
@@ -23,10 +23,10 @@ struct RootView: View {
                     switch root {
                     case .home:
                         HomeView(path: $path)
-                    case .detail:
-                        DetailView()
+                    case .detail(let selectedService):
+                        SubscriptionDetailView(appInfo: selectedService)
                     case .addSubscription:
-                        AddSubscriptionView() 
+                        SubscriptionView(path: $path)
                     }
                 }
         }

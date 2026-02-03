@@ -6,11 +6,6 @@
 //
 import SwiftUI
 
-enum BillingCycle: String, CaseIterable {
-    case weakly = "Weakly"
-    case monthly = "Monthly"
-    case yearly = "Yearly"
-}
 
 struct HomeView: View {
     @State private var isGrid: Bool = false
@@ -63,5 +58,6 @@ struct HomeView: View {
 }
 
 #Preview {
+    HomeView(path: .constant(NavigationPath()))
    
 }
