@@ -140,6 +140,9 @@ struct SubscriptionDetailView: View {
                         Toggle("", isOn: $reminderIsOn)
                             .labelsHidden()
                             .tint(Color("green"))
+                            .onChange(of: reminderIsOn) { oldValue, newValue in
+                                NotificationManager.shared.requestNotificationPermission()
+                            }
                     }
                 }
                 .listRowBackground(Color("primary"))
@@ -169,6 +172,10 @@ struct SubscriptionDetailView: View {
                     
                     do {
                         try modelContext.save()
+                        
+                        if reminderIsOn {
+                            NotificationManager.shared.scheduleReminder(subscription: newSubscription)
+                        }
                         dismiss()
                     } catch {
                         print("error:: \(error)")

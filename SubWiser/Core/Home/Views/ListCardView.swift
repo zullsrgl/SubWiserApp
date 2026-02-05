@@ -10,6 +10,7 @@ import SwiftUI
 struct ListCardView: View {
     
     @State var subscription: UserSubscription
+    var subscriptionDate: Date
     
     var body: some View {
         ZStack {
@@ -77,7 +78,7 @@ struct ListCardView: View {
                                 .frame(width: 8, height: 8)
                                 .foregroundStyle(Color(hex: subscription.service?.hexColor ?? ""))
                             
-                            Text("6 day left")
+                            Text("Active for \(subscriptionDate.daysSince()) days")
                                 .font(.caption)
                                 .foregroundStyle(Color("gray"))
                                 .fontWeight(.thin)
@@ -92,5 +93,5 @@ struct ListCardView: View {
 }
 
 #Preview {
-    ListCardView(subscription: UserSubscription(id: "", price: 0.0, currency: "", category: "", date: Date(), billingCycle: "", reminder: true, service: nil))
+    ListCardView(subscription: UserSubscription(id: "", price: 0.0, currency: "", category: "", date: Date(), billingCycle: "", reminder: true, service: nil), subscriptionDate: Date())
 }

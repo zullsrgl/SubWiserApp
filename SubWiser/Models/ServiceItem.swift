@@ -8,30 +8,6 @@
 import Foundation
 import SwiftData
 
-@Model
-final class UserSubscription {
-    @Attribute(.unique) var id: String
-    var price: Double
-    var currency: String
-    var category: String
-    var date: Date
-    var billingCycle: String
-    var reminder: Bool?
-    
-    @Relationship(deleteRule: .nullify)
-    var service: ServiceItem?
-    
-    init(id: String = UUID().uuidString, price: Double, currency: String, category: String, date: Date, billingCycle: String, reminder: Bool? = nil, service: ServiceItem? = nil) {
-        self.id = id
-        self.price = price
-        self.currency = currency
-        self.category = category
-        self.date = date
-        self.billingCycle = billingCycle
-        self.reminder = reminder
-        self.service = service
-    }
-}
 
 @Model
 final class ServiceItem {
@@ -85,20 +61,3 @@ final class ServiceItem {
 }
 
 
-struct ServiceResponse: Codable {
-    let services: [ServiceJSONModel]
-}
-
-struct ServiceJSONModel: Codable {
-    let id: String
-    let name: String
-    let category: String
-    let domain: String
-    let imageUrl: String
-    let color: String
-    
-    enum CodingKeys: String, CodingKey {
-        case id, name, category, domain, color
-        case imageUrl = "image_url"
-    }
-}

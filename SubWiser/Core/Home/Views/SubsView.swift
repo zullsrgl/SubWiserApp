@@ -62,14 +62,14 @@ struct SubsView: View {
             if isGrid  {
                 LazyVGrid(columns: columns, spacing: 16) {
                     ForEach(subscription) { index in
-                        GridCardView(subscription: index)
+                        GridCardView(subscription: index, subscriptionDate: index.date)
                     }
                 }
                 
             }else {
                 LazyVStack {
                     ForEach(subscription){ index in
-                        ListCardView(subscription: index)
+                        ListCardView(subscription: index, subscriptionDate: index.date)
                         
                     }
                 }

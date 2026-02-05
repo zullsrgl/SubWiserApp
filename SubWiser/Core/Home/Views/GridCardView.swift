@@ -11,6 +11,8 @@ struct GridCardView: View {
     
     @State var subscription: UserSubscription
     
+    var subscriptionDate: Date
+    
     var body: some View {
         ZStack(alignment: .leading){
             RoundedRectangle(cornerRadius: 16)
@@ -73,7 +75,7 @@ struct GridCardView: View {
                         .frame(width: 8, height: 8)
                         .foregroundStyle(Color(hex: subscription.service?.hexColor ?? ""))
                     
-                    Text("6 day left")
+                    Text("Active for \(subscriptionDate.daysSince()) days")
                         .font(.caption)
                         .foregroundStyle(Color("slatGray"))
                         .fontWeight(.thin)
@@ -95,5 +97,5 @@ extension UserSubscription {
 }
 
 #Preview {
-    GridCardView(subscription: UserSubscription(price: 0.0, currency: "", category: "", date: Date(), billingCycle: ""))
+    GridCardView(subscription: UserSubscription(price: 0.0, currency: "", category: "", date: Date(), billingCycle: ""), subscriptionDate: Date())
 }

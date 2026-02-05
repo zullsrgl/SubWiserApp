@@ -44,3 +44,13 @@ extension Color {
     }
 }
 
+extension Date {
+    func daysSince() -> Int {
+        let calendar = Calendar.current
+        let startOfStoredDate = calendar.startOfDay(for: self)
+        let startOfToday = calendar.startOfDay(for: Date())
+        
+        let components = calendar.dateComponents([.day], from: startOfStoredDate, to: startOfToday)
+        return components.day ?? 0
+    }
+}
