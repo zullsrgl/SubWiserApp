@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct SubListCardView: View {
+struct SearchCardView: View {
     var appIconUrl: String
     var appName: String
     var appCategory: String
@@ -65,5 +65,5 @@ struct SubListCardView: View {
 }
 
 #Preview {
-    SubListCardView(appIconUrl: "", appName: "", appCategory: "")
+    SearchCardView(appIconUrl: "", appName: "", appCategory: "")
 }

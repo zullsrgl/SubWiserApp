@@ -26,7 +26,7 @@ struct RootView: View {
                     case .detail(let selectedService):
                         SubscriptionDetailView(appInfo: selectedService)
                     case .addSubscription:
-                        SubscriptionView(path: $path)
+                        SearchView(path: $path)
                     }
                 }
         }

@@ -27,26 +27,27 @@ struct SubscriptionDetailView: View {
         VStack {
             TextField("0.00", value: $price, format: .number)
                 .keyboardType(.decimalPad)
-                    .font(.largeTitle)
-                    .multilineTextAlignment(.center)
-                    .keyboardType(.decimalPad)
-                    .foregroundStyle(Color("white"))
+                .font(.largeTitle)
+                .multilineTextAlignment(.center)
+                .keyboardType(.decimalPad)
+                .foregroundStyle(Color("white"))
             
-            Form {
+            Form{
                 Section {
-                    HStack {
+                    HStack{
                         Image(systemName: "dollarsign.circle")
                             .resizable()
                             .foregroundStyle(Color("white"))
-                            .frame(width: 30, height: 30)
+                            .frame(width: 24, height: 24)
                         
                         Text("Currency")
                             .foregroundStyle(Color("white"))
+                            .font(.custom("", size: 16))
                         Spacer()
                         
                         Picker("", selection: $currency) {
-                            ForEach(Currency.allCases, id: \.self){ segment in
-                                Text(segment.rawValue.capitalized)
+                            ForEach(Currency.allCases, id: \.self){ item in
+                                Text("\(item.symbol)").tag(item)
                                     .foregroundStyle(Color("white"))
                             }
                             
@@ -61,7 +62,7 @@ struct SubscriptionDetailView: View {
                         Image(systemName: "square.on.circle")
                             .resizable()
                             .foregroundStyle(Color("white"))
-                            .frame(width: 30, height: 30)
+                            .frame(width: 24, height: 24)
                         
                         Text("Category")
                             .foregroundStyle(Color("white"))
@@ -82,13 +83,14 @@ struct SubscriptionDetailView: View {
                     }
                 }
                 .listRowBackground(Color("primary"))
+                .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
                 
                 Section {
                     HStack {
                         Image(systemName: "calendar")
                             .resizable()
                             .foregroundStyle(Color("white"))
-                            .frame(width: 30, height: 30)
+                            .frame(width: 24, height: 24)
                         
                         Text("Start Date")
                             .foregroundStyle(Color("white"))
@@ -103,7 +105,8 @@ struct SubscriptionDetailView: View {
                         Image(systemName: "arrow.2.squarepath")
                             .resizable()
                             .foregroundStyle(Color("white"))
-                            .frame(width: 30, height: 24)
+                            .scaledToFill()
+                            .frame(width: 24, height: 24)
                         
                         Text("Billing Cycle")
                             .foregroundStyle(Color("white"))
@@ -124,6 +127,7 @@ struct SubscriptionDetailView: View {
                     }
                 }
                 .listRowBackground(Color("primary"))
+                .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
                 
                 Section {
                     HStack {
@@ -139,12 +143,14 @@ struct SubscriptionDetailView: View {
                     }
                 }
                 .listRowBackground(Color("primary"))
+                .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
                 
             }
             .scrollContentBackground(.hidden)
         }
         .background(Color("background"))
         .navigationTitle(appInfo.name)
+        .foregroundStyle(Color("white"))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {

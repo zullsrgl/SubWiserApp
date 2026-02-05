@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct SubscriptionView: View {
+struct SearchView: View {
     @Query(sort: \ServiceItem.name) private var allServices: [ServiceItem]
     @Environment(\.modelContext) private var modelContext
     
@@ -29,7 +29,7 @@ struct SubscriptionView: View {
         ScrollView {
             LazyVStack(spacing: 24) {
                 ForEach(filteredServices) { service in
-                    SubListCardView(appIconUrl: service.imageUrl,
+                    SearchCardView(appIconUrl: service.imageUrl,
                                     appName: service.name,
                                     appCategory: service.category)
                     .onTapGesture {
@@ -47,6 +47,6 @@ struct SubscriptionView: View {
 }
 
 #Preview {
-    SubscriptionView(path: .constant(NavigationPath()))
+    SearchView(path: .constant(NavigationPath()))
 }
 

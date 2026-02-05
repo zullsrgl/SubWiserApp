@@ -68,8 +68,8 @@ struct SubsView: View {
                 
             }else {
                 LazyVStack {
-                    ForEach(0..<10){ index in
-                        ListCardView()
+                    ForEach(subscription){ index in
+                        ListCardView(subscription: index)
                         
                     }
                 }
