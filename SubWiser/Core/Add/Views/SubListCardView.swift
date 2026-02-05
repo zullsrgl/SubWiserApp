@@ -64,7 +64,6 @@ struct SubListCardView: View {
     }
 }
 
-
 #Preview {
     SubListCardView(appIconUrl: "", appName: "", appCategory: "")
 }

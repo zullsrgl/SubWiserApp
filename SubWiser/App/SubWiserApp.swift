@@ -11,7 +11,9 @@ import SwiftData
 struct SubWiserApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            ServiceItem.self,])
+            ServiceItem.self,
+            UserSubscription.self
+        ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
         
         do {
@@ -20,7 +22,7 @@ struct SubWiserApp: App {
             
             return container
         } catch {
-            fatalError("SwiftData error: \(error)")
+            fatalError("Could not create ModelContainer: \(error)")
         }
     }()
     

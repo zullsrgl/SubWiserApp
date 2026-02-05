@@ -5,12 +5,13 @@
 //  Created Zülal Sarıoğlu on 1.02.2026.
 //
 import SwiftUI
-
+import SwiftData
 
 struct HomeView: View {
     @State private var isGrid: Bool = false
     @State private var selectedSegment: BillingCycle = .monthly
     @Binding var path: NavigationPath
+    @Query private var subscriptions: [UserSubscription]
     
     var body: some View {
         ScrollView {
@@ -38,7 +39,7 @@ struct HomeView: View {
                     .padding(.horizontal, 16)
                     
                     ChartView()
-                    SubsView()
+                    SubsView(subscription: subscriptions)
                 }
             }
             .toolbar {

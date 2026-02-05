@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SubsView: View {
     @State private var isGrid = true
+    @State var subscription: [UserSubscription]
+    
     
     let columns = [
         GridItem(.flexible()),
@@ -59,8 +61,8 @@ struct SubsView: View {
             
             if isGrid  {
                 LazyVGrid(columns: columns, spacing: 16) {
-                    ForEach(0..<10) { index in
-                        GridCardView()
+                    ForEach(subscription) { index in
+                        GridCardView(subscription: index)
                     }
                 }
                 
@@ -78,7 +80,7 @@ struct SubsView: View {
 }
 
 #Preview {
-    SubsView()
+    SubsView(subscription: [UserSubscription(price: 0.0, currency: "", category: "", date: Date(), billingCycle: "")])
 }
 
 

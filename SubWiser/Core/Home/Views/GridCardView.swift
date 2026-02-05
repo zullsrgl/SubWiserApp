@@ -8,26 +8,50 @@
 import SwiftUI
 
 struct GridCardView: View {
+    
+    @State var subscription: UserSubscription
+    
     var body: some View {
         ZStack(alignment: .leading){
             RoundedRectangle(cornerRadius: 16)
                 .stroke(Color("gray"), lineWidth: 1)
-                .frame(width: 160, height: 160)
+                .frame(width: 160, height: 180)
             
             VStack(alignment:.leading, spacing: 8){
-                Image(systemName: "heart")
-                    .resizable()
-                    .foregroundStyle(Color("gray"))
-                    .frame(width: 52, height: 52)
+                AsyncImage(url: URL(string: subscription.service?.imageUrl ?? "")) { phase in
+                    switch phase {
+                    case .empty:
+                        ProgressView()
+                            .frame(width: 40, height: 40)
+                            
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 40, height: 40)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                            
+                    case .failure:
+                        Image(systemName: "questionmark.app.dashed")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(.gray)
+                            
+                    @unknown default:
+                        EmptyView()
+                    }
+                }
                 
-                Text("Netflix")
-                    .foregroundStyle(Color("gray"))
+                Text(subscription.service?.name ?? "?")
+                    .foregroundStyle(Color("primary"))
                     .font(.headline)
-                    .multilineTextAlignment(.leading)
                     .fontWeight(.semibold)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                    .frame(width: 160, alignment: .leading)
                 
-                Text("$32,04")
-                    .foregroundStyle(Color("gray"))
+                Text(String(subscription.price))
+                    .foregroundStyle(Color("white"))
                     .font(.headline)
                     .multilineTextAlignment(.leading)
                     .fontWeight(.semibold)
@@ -35,7 +59,7 @@ struct GridCardView: View {
                 HStack {
                     RoundedRectangle(cornerRadius: 8)
                         .frame(width: 8, height: 8)
-                        .foregroundStyle(Color("gray"))
+                        .foregroundStyle(Color("primary"))
                     
                     Text("6 day left")
                         .font(.caption)
@@ -45,10 +69,13 @@ struct GridCardView: View {
                 
             }
             .padding(.leading, 16)
+            .onAppear{
+                print("subs price: \(subscription.price)")
+            }
         }
     }
 }
 
 #Preview {
-    GridCardView()
+    GridCardView(subscription: UserSubscription(price: 0.0, currency: "", category: "", date: Date(), billingCycle: ""))
 }
