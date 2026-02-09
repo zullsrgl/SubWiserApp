@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct ListCardView: View {
-    
-    @State var subscription: UserSubscription
-    var subscriptionDate: Date
-    
+    var subscription: UserSubscription
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16)
                 .stroke(Color("gray"), lineWidth: 1)
                 .frame(height: 80)
-                .padding(.horizontal)
             
             VStack {
                 HStack {
@@ -62,7 +58,7 @@ struct ListCardView: View {
                     }
                     Spacer()
                     
-                    VStack {
+                    VStack(alignment: .trailing){
                         Text(subscription.category)
                             .foregroundStyle(Color("white"))
                             .font(.custom("", size: 12))
@@ -78,20 +74,19 @@ struct ListCardView: View {
                                 .frame(width: 8, height: 8)
                                 .foregroundStyle(Color(hex: subscription.service?.hexColor ?? ""))
                             
-                            Text("Active for \(subscriptionDate.daysSince()) days")
+                            Text("Active for \(subscription.date.daysSince()) days")
                                 .font(.caption)
-                                .foregroundStyle(Color("gray"))
+                                .foregroundStyle(Color("slatGray"))
                                 .fontWeight(.thin)
                         }
                     }
                     .padding(.trailing, 8)
                 }
-                .padding(.horizontal, 16)
             }
         }
     }
 }
 
 #Preview {
-    ListCardView(subscription: UserSubscription(id: "", price: 0.0, currency: "", category: "", date: Date(), billingCycle: "", reminder: true, service: nil), subscriptionDate: Date())
+    ListCardView(subscription: UserSubscription(id: "", price: 0.0, currency: "", category: "", date: Date(), billingCycle: "", reminder: true, service: nil))
 }

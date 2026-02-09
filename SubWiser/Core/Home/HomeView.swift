@@ -14,7 +14,7 @@ struct HomeView: View {
     @Query private var subscriptions: [UserSubscription]
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false){
             ZStack(alignment: .leading){
                 VStack(alignment: .leading, spacing: 24){
                     Text("Total Spending")
@@ -42,23 +42,25 @@ struct HomeView: View {
                     SubsView(subscription: subscriptions)
                 }
             }
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        path.append(Root.addSubscription)
-                    } label: {
-                        Image(systemName: "plus")
-                            .resizable()
-                            .foregroundStyle(Color("white"))
-                    }
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    path.append(Root.addSubscription)
+                } label: {
+                    Image(systemName: "plus")
+                        .resizable()
+                        .foregroundStyle(Color("white"))
                 }
             }
         }
         .background(Color("background"))
-    }
+        .navigationTitle("SubWiser")
+        .navigationBarTitleDisplayMode(.inline)
+    }  
 }
 
 #Preview {
     HomeView(path: .constant(NavigationPath()))
-   
+    
 }

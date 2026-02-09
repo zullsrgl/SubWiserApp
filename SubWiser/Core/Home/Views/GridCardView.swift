@@ -8,19 +8,15 @@
 import SwiftUI
 
 struct GridCardView: View {
-    
-    @State var subscription: UserSubscription
-    
-    var subscriptionDate: Date
-    
+    var subscription: UserSubscription
     var body: some View {
         ZStack(alignment: .leading){
             RoundedRectangle(cornerRadius: 16)
                 .stroke(Color("gray"), lineWidth: 1)
-                .frame(width: 160, height: 160)
+                .frame(maxWidth: .infinity)
             
             VStack(alignment:.leading, spacing: 8){
-                HStack {
+                HStack(spacing: 8){
                     AsyncImage(url: URL(string: subscription.service?.imageUrl ?? "")) { phase in
                         switch phase {
                         case .empty:
@@ -45,6 +41,7 @@ struct GridCardView: View {
                         }
                     }
                     
+                    Spacer()
                     Text(subscription.category)
                         .foregroundStyle(Color("white"))
                         .font(.custom("", size: 12))
@@ -55,7 +52,6 @@ struct GridCardView: View {
                                 .fill(Color(hex: subscription.service?.hexColor ?? "").opacity(0.5))
                         }
                 }
-                
                 Text(subscription.service?.name ?? "?")
                     .foregroundStyle(Color("primary"))
                     .font(.custom("", size: 14))
@@ -75,18 +71,18 @@ struct GridCardView: View {
                         .frame(width: 8, height: 8)
                         .foregroundStyle(Color(hex: subscription.service?.hexColor ?? ""))
                     
-                    Text("Active for \(subscriptionDate.daysSince()) days")
+                    Text("Active for \(subscription.date.daysSince()) days")
                         .font(.caption)
                         .foregroundStyle(Color("slatGray"))
                         .fontWeight(.thin)
                 }
                 
             }
-            .padding(.leading, 16)
-            .onAppear{
-                print("subs price: \(subscription.price)")
-            }
+            .padding(.horizontal, 8)
+            .padding(.top, 8)
+            .padding(.bottom, 8)
         }
+        .contentShape(.contextMenuPreview, RoundedRectangle(cornerRadius: 16))
     }
 }
 
@@ -97,5 +93,5 @@ extension UserSubscription {
 }
 
 #Preview {
-    GridCardView(subscription: UserSubscription(price: 0.0, currency: "", category: "", date: Date(), billingCycle: ""), subscriptionDate: Date())
+    GridCardView(subscription: UserSubscription(price: 0.0, currency: "", category: "", date: Date(), billingCycle: ""))
 }
