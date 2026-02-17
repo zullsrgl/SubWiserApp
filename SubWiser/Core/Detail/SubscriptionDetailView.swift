@@ -8,8 +8,6 @@
 import SwiftUI
 import SwiftData
 
-
-
 struct SubscriptionDetailView: View {
     
     let appInfo: ServiceItem
@@ -19,6 +17,7 @@ struct SubscriptionDetailView: View {
     @State private var currency: Currency = .tr
     @State private var category: ServiceCategory = .entertainment
     @State private var price: Double = 0.0
+    @StateObject private var viewModel = DetailViewModel()
     
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) var dismiss
@@ -141,7 +140,7 @@ struct SubscriptionDetailView: View {
                             .labelsHidden()
                             .tint(Color("green"))
                             .onChange(of: reminderIsOn) { oldValue, newValue in
-                                NotificationManager.shared.requestNotificationPermission()
+                                viewModel.requestNotificationPermission()
                             }
                     }
                 }
@@ -174,7 +173,7 @@ struct SubscriptionDetailView: View {
                         try modelContext.save()
                         
                         if reminderIsOn {
-                            NotificationManager.shared.scheduleReminder(subscription: newSubscription)
+                            viewModel.sendNotification(subscription: newSubscription)
                         }
                         dismiss()
                     } catch {

@@ -20,7 +20,6 @@ class NotificationManager{
     }
     
     func scheduleReminder(subscription: UserSubscription) {
-        
         guard subscription.reminder == true else { return}
         let content = UNMutableNotificationContent()
         content.title = "Payment Day: \(subscription.service?.name ?? "Application")"

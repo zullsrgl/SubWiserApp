@@ -14,6 +14,7 @@ struct SubsView: View {
     @State private var isLongPress = false
     @Environment(\.modelContext) private var modelContext
     
+    var subOnClicked: (ServiceItem) -> Void
     
     var subscription: [UserSubscription]
     let columns = [
@@ -67,6 +68,9 @@ struct SubsView: View {
                     ForEach(subscription) { index in
                         GridCardView(subscription: index)
                             .contentShape(Rectangle())
+                            .onTapGesture {
+                                subOnClicked(index.service ?? ServiceItem(id: "", name: "", category: "", domain: "", imageUrl: "", hexColor: ""))
+                            }
                             .contextMenu{
                                 Button(role: .destructive) {
                                     deleteSubs(item: index)
@@ -74,6 +78,7 @@ struct SubsView: View {
                                     Label("Delete", systemImage: "trash")
                                 }
                             }
+                        
                     }
                 }
                 
@@ -82,6 +87,9 @@ struct SubsView: View {
                     ForEach(subscription){ index in
                         ListCardView(subscription: index)
                             .contentShape(Rectangle())
+                            .onTapGesture {
+                                subOnClicked(index.service ?? ServiceItem(id: "", name: "", category: "", domain: "", imageUrl: "", hexColor: ""))
+                            }
                             .contextMenu{
                                 Button(role: .destructive) {
                                     deleteSubs(item: index)
@@ -109,7 +117,7 @@ struct SubsView: View {
 }
 
 #Preview {
-    SubsView(subscription: [UserSubscription(price: 0.0, currency: "", category: "", date: Date(), billingCycle: "")])
+    SubsView(subOnClicked: {_ in }, subscription: [UserSubscription(price: 0.0, currency: "", category: "", date: Date(), billingCycle: "")])
 }
 
 

@@ -39,7 +39,10 @@ struct HomeView: View {
                     .padding(.horizontal, 16)
                     
                     ChartView()
-                    SubsView(subscription: subscriptions)
+                    SubsView(
+                        subOnClicked: { serviceItem in
+                            path.append(Root.detail(serviceItem))
+                    }, subscription: subscriptions)
                 }
             }
         }

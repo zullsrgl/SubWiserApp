@@ -10,8 +10,7 @@ import SwiftData
 
 struct SearchView: View {
     @Query(sort: \ServiceItem.name) private var allServices: [ServiceItem]
-    @Environment(\.modelContext) private var modelContext
-    
+    @State private var showCreateSubs = false
     @State private var searchText = ""
     @Binding var path: NavigationPath
     
@@ -34,6 +33,16 @@ struct SearchView: View {
                                     appCategory: service.category)
                     .onTapGesture {
                         path.append(Root.detail(service))
+                    }
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        path.append(Root.createSubs)
+                    } label: {
+                        Image(systemName: "plus")
+                            .foregroundStyle(Color("white"))
                     }
                 }
             }
