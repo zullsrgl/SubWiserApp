@@ -8,6 +8,13 @@ import SwiftUI
 import Combine
 
 final class DetailViewModel: ObservableObject {
+    @Published var selectedIconPath: String? = nil
+    @Published var icons: [String] = []
+  
+    func fetchIcons() async {
+        self.icons =  await CloudinaryManager.shared.fetchIcons()
+        
+    }
     
     func sendNotification(subscription: UserSubscription) {
         NotificationManager.shared.scheduleReminder(subscription: subscription)

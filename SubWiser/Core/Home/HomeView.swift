@@ -60,7 +60,7 @@ struct HomeView: View {
         .background(Color("background"))
         .navigationTitle("SubWiser")
         .navigationBarTitleDisplayMode(.inline)
-    }  
+    }
 }
 
 #Preview {

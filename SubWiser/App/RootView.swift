@@ -9,9 +9,8 @@ import SwiftUI
 
 enum Root: Hashable {
     case home
-    case detail(ServiceItem)
+    case detail(ServiceItem?)
     case addSubscription
-    case createSubs
 }
 
 struct RootView: View {
@@ -28,8 +27,7 @@ struct RootView: View {
                         SubscriptionDetailView(appInfo: selectedService)
                     case .addSubscription:
                         SearchView(path: $path)
-                    case .createSubs:
-                        SubsCreateView()
+                        
                     }
                 }
         }

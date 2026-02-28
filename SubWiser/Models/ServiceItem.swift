@@ -61,3 +61,8 @@ final class ServiceItem {
 }
 
 
+extension ServiceItem {
+    static var empty: ServiceItem {
+        ServiceItem(id: "", name: "", category: "", domain: "", imageUrl: "", hexColor: "")
+    }
+}

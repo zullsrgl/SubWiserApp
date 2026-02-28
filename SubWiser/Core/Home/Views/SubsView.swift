@@ -78,7 +78,6 @@ struct SubsView: View {
                                     Label("Delete", systemImage: "trash")
                                 }
                             }
-                        
                     }
                 }
                 
